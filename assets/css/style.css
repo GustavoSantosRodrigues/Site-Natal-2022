@@ -57,7 +57,7 @@ html {
 
 body {
     font-family: var(--body-font);
-    background-color: var(--body-color);
+    background-color: #C6DDF0;
     color: var(--black-color);
     font-size: (--normal-font-size);
     overflow-x: hidden
@@ -205,4 +205,68 @@ header .icon__toggle:hover {
 
 .icon__close:hover {
     color: var(--second-color-light);
+}
+
+/* HOME */
+
+.home {
+    position: relative;
+    background-image: url(../img/bg-header.png);
+    background-repeat: no-repeat;
+}
+
+.home__content {
+    text-align: center;
+    margin-block: 3rem;
+}
+
+.home__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    color: var(--black-color);
+    line-height: 36px;
+    margin-bottom: 1rem;
+}
+
+.home__title span {
+    font-size: calc(var(--big-font-size) + 1rem );
+    font-weight: var(--font-black);
+    color: var(--white-color);
+}
+
+.home__subtitle {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--black-color);
+    margin-bottom: 1.5rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: .2rem;
+}
+
+.time {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--first-color-light);
+    border-radius: 50%;
+    color: var(--white-color);
+    padding: 2rem;
+}
+
+.time h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    line-height: 32px;
+}
+
+.time small {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
 }
