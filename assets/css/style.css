@@ -1,0 +1,208 @@
+:root {
+    --header-height: 6rem;
+    /*=============== COLLORS ============================*/
+    --body-color: linear-gradient(180deg, #C6DDF0 0%, rgba(198, 221, 240, 0) 100%);
+    --first-color: #034732;
+    --first-color-light: #008148;
+    --second-color: #DB504A;
+    --second-color-light: #F25B5B;
+    --white-color: #FAFAFA;
+    --black-color: #161616;
+
+     /*=============== FONT AND TYPOGRAPHY ================*/
+     --body-font: 'Poppins', sans-serif;
+     --big-font-size: 2.5rem;
+     --h1-font-size: 2rem;
+     --h2-font-size: 1.5rem;
+     --h3-font-size: 1rem;
+     --normal-font-size: 0.938rem;
+     --small-font-size: 0.813rem;
+     --smaller-font-size: 0.75rem;
+
+     /*=============== FONT WEIGHT ========================*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+    --font-black: 900;
+
+    /*=============== Z INDEXS ===========================*/
+    --z-fixed: 100;
+    --z-tooltip: 10;
+    --z-negative: -1;
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --big-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--black-color);
+    font-size: (--normal-font-size);
+    overflow-x: hidden
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+section{
+    padding: var(--header-height) 2rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     padding: 1rem 2rem;
+     align-items: center;
+     justify-content: space-between;
+     z-index: var(--z-fixed);
+     transition: background-color .4s;
+}
+
+.logo {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--black-color);
+    transition: color .4s;
+}
+
+.icon__log {
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.logo:hover {
+    color: var(--first-color-light);
+}
+
+header .nav__cart {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.header .icon__cart {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.header .icon__cart:hover {
+    color: var(--first-color-light);
+}
+
+.header .icon__toggle {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    cursor: pointer;
+    transition: color 4s;
+}
+
+header .icon__toggle:hover {
+    color: var(--first-color-light);
+}
+
+@media (max-width:960px) {
+    .nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+        text-align: center;
+        padding-block: 5rem;
+        z-index: var(--z-fixed);
+        transition: top .4s;
+    }
+
+    .nav__item {
+        padding-bottom: 2rem;
+    }
+
+    .nav__img {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        width: 150px;
+        z-index: var(--z-negative);
+    } 
+
+    .show-menu {
+        top: 0;
+    }
+}
+
+.nav__link {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    color: var(--black-color);
+    border-bottom: 2px solid transparent;
+    transition: color 1s, border-bottom .1s;
+}
+
+.nav__link:hover {
+    color: var(--first-color-light);
+    border-bottom: 2px solid var(--first-color-light);
+}
+
+.nav__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.icon__close {
+    font-size: 1.5rem;
+    color: var(--second-color);
+    transition: color .4s;
+}
+
+.icon__close:hover {
+    color: var(--second-color-light);
+}
