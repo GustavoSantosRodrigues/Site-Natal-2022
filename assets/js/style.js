@@ -95,18 +95,18 @@ setInterval(updateCountdown, 1000)
 
 // animation
 
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 1000,
-    delay: 300
-})
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '60px',
+//     duration: 1000,
+//     delay: 300
+// })
 
-sr.reveal(`.home__content, .section__title, .contact__content`)
-sr.reveal(`.section__subtitle`, {interval: 100})
-sr.reveal(`.hero__img, .about__img, .donate__title, .discount__img`, {origin: 'left'})
-sr.reveal(`.about__content, .donate__img, .discount__content`, {origin: 'right'})
-sr.reveal(`.category, .accessory__cards, .contact__form`, {origin: 'bottom'})
+// sr.reveal(`.home__content, .section__title, .contact__content`)
+// sr.reveal(`.section__subtitle`, {interval: 100})
+// sr.reveal(`.hero__img, .about__img, .donate__title, .discount__img`, {origin: 'left'})
+// sr.reveal(`.about__content, .donate__img, .discount__content`, {origin: 'right'})
+// sr.reveal(`.category, .accessory__cards, .contact__form`, {origin: 'bottom'})
 
 
 
