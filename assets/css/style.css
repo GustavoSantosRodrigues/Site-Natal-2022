@@ -57,7 +57,7 @@ html {
 
 body {
     font-family: var(--body-font);
-    background-color: #C6DDF0;
+    background-color: #9aaab7;
     color: var(--black-color);
     font-size: (--normal-font-size);
     overflow-x: hidden
@@ -236,11 +236,54 @@ header .icon__toggle:hover {
 
 /* HOME */
 
-.home {
-    position: relative;
-    background-image: url(../img/bg-header.png);
-    background-repeat: no-repeat;
+.neve, .neve::after, .neve::before {
+        content: '';
+        position: absolute;
+        top: -650px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: 
+        radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+        radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+        radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+        radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+        radial-gradient(6px 6px at 500px 100px, #fff, transparent),
+        radial-gradient(3px 3px at 50px 200px, #fff, transparent),
+        radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+        radial-gradient(6px 6px at 250px 400px, #fff, transparent),
+        radial-gradient(3px 3px at 350px 500px, #fff, transparent);
+        background-size: 650px 650px;
+        animation: neveAnim 2s linear;
+        animation-iteration-count: infinite;
 }
+
+.neve::after {
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction:reverse;
+    animation-duration: 6s;
+    height: 600vh;
+}
+
+.neve::before {
+    margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction:reverse;
+    animation-duration: 9s;
+}
+
+@keyframes neveAnim{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(650px);
+    }
+}
+
 
 .home__content {
     text-align: center;
