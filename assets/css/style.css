@@ -244,7 +244,7 @@ header .icon__toggle:hover {
 
 .neve, .neve::after, .neve::before {
         content: '';
-        position: absolute;
+        position: fixed;
         top: -650px;
         left: 0;
         bottom: 0;
