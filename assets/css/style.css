@@ -172,6 +172,12 @@ header .icon__toggle:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, .55);
 }
 
+@media (max-width:420px) {
+    .header {
+        padding: 2rem 2rem;
+    }
+ 
+}
 @media (max-width:960px) {
     .nav {
         position: fixed;
@@ -718,6 +724,7 @@ header .icon__toggle:hover {
         height: 100vh;
     }
 }
+
 @media (min-width: 760px){
     .contact{
         grid-template-columns: repeat(2, 1fr);
