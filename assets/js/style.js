@@ -27,6 +27,19 @@ function linkAction(){
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+//box-shadow menu
+
+function scrollHeader(){
+    const scrollHeader = document.getElementById('header')
+    if(this.scrollY >= 80){
+        scrollHeader.classList.add('scroll-header')
+    }else{
+        scrollHeader.classList.remove('scroll-header')
+    }
+}
+
+window.addEventListener('scroll', scrollHeader)
+
 /**CONTAGEM REGRESSIVA */
 const secondsContainer = document.querySelector('#seconds')
 const minutesContainer = document.querySelector('#minutes')
@@ -57,3 +70,6 @@ setTimeout( () =>{
 }, 1000)
 
 setInterval(updateCountdown, 1000)
+
+
+
