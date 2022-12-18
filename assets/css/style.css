@@ -264,7 +264,7 @@ header .icon__toggle:hover {
     filter: blur(2px);
     animation-direction:reverse;
     animation-duration: 6s;
-    height: 600vh;
+    height: 500vh;
 }
 
 .neve::before {
