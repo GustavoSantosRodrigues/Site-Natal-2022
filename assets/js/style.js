@@ -40,6 +40,28 @@ function scrollHeader(){
 
 window.addEventListener('scroll', scrollHeader)
 
+// scroll section active link
+
+const sections = document.querySelectorAll('section[id]')
+const scrollActive = () => {
+    const scrolly = window.scrollY
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+        sectionTop = current.offsetTop - 160,
+        sectionId = current.getAttribute('id'),
+        sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if(scrolly > sectionTop && scrolly <= sectionTop + sectionHeight){
+            sectionClass.classList.add('active-link')
+        }else {
+            sectionClass.classList.remove('active-link')
+        }
+    }) 
+}
+
+window.addEventListener('scroll', scrollActive)
+
 /**CONTAGEM REGRESSIVA */
 const secondsContainer = document.querySelector('#seconds')
 const minutesContainer = document.querySelector('#minutes')
@@ -70,6 +92,21 @@ setTimeout( () =>{
 }, 1000)
 
 setInterval(updateCountdown, 1000)
+
+// animation
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1000,
+    delay: 300
+})
+
+sr.reveal(`.home__content, .section__title, .contact__content`)
+sr.reveal(`.section__subtitle`, {interval: 100})
+sr.reveal(`.hero__img, .about__img, .donate__title, .discount__img`, {origin: 'left'})
+sr.reveal(`.about__content, .donate__img, .discount__content`, {origin: 'right'})
+sr.reveal(`.category, .accessory__cards, .contact__form`, {origin: 'bottom'})
 
 
 
