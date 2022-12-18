@@ -708,6 +708,15 @@ header .icon__toggle:hover {
         justify-content: space-around;
         align-items: flex-start;
     }
+
+    .neve::after {
+        margin-left: -250px;
+        opacity: 0.5;
+        filter: blur(2px);
+        animation-direction:reverse;
+        animation-duration: 6s;
+        height: 300vh;
+    }
 }
 @media (min-width: 760px){
     .contact{
